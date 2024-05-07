@@ -41,25 +41,11 @@ In the initial preparation phase, i performed the following tasks:
 ### Data Analysis 
 
 ```SQL
-with customer_sales AS (
-    select CUSTOMERNAME, sum(SALES) as total_sales
-    from sales
-    group by CUSTOMERNAME
-), total_revenue AS (
-    SELECT sum(SALES) as total_amount
-    from sales
-)
-select 
-case 
-    when cumulative_percentage <= 20 THEN 'top 20% customers'
-    else 'Remaining customers'
-end as customer_category,sum(total_sales)
-from (select CUSTOMERNAME, total_sales, 100* sum(total_sales) over (order by total_sales desc)/(select total_amount from total_revenue)as cumulative_percentage from customer_sales) as subquery
-group by
-CASE 
-    when cumulative_percentage <= 20 THEN 'top 20% customers'
-    else 'Remaining customers'
-END;
+select DISTINCT(CUSTOMERNAME), SUM(SALES) as[Customer revenue],(SUM(SALES)/ (SELECT SUM(SALES) FROM sales))*100 [Customer revenue to the company]
+from sales
+GROUP BY CUSTOMERNAME
+order by 3 desc;
+
 ```
 ### Results
 The analysis results are summarized as follows:
@@ -70,7 +56,7 @@ The analysis results are summarized as follows:
 - Madrid City had the highest sales among the cities.
 - Classic Cars are the best performing product in terms of sales.
 - Euro Shopping Channel contributed the highest percentage to the Company's revenue.
-   [Sales Dashboard]((https://github.com/Marangi037/data-analysis-project/assets/159117592/1d063417-ba6a-450c-863f-873a32c44cdf)
+  ! ((https://github.com/Marangi037/data-analysis-project/assets/159117592/1d063417-ba6a-450c-863f-873a32c44cdf)
 
 
 ### Recommendation
@@ -79,7 +65,7 @@ Based on the analysis, i recommend yhe following actions:
 - Invest in transportation of large goods to customers since they have the highest sales.
 - Focus on expanding and promoting Classic cars since they are the highest selling product
 - Develop targeted marketing campaigns to reach specific customer segments. Tailor the messaging to highlight the unique features and benefits of each product model.
-- Implement a customer segmentation strategy to target the top 20% customer who contribute highly to the company's revenue.
+- Implement a customer segmentation strategy to target the top customers who contribute highly to the company's revenue.
 - Partner with financial institutions or ofeer in-house financing options to make it easier for customers to purchase products. Flexible financing options can expand the customer base and increase sales.
 - Focus on providing excellent after-sale service and support.
 - Focus on achieve a 100% delivery rate of goods to the customers.
