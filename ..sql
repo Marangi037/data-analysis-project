@@ -1,9 +1,6 @@
 select *
 from sales
 
-
-
-
 --data cleaning
 --checking for duplicates(used a cte)
 
@@ -135,30 +132,7 @@ select TOP 20 PERCENT sum(SALES)[Sum of sales], (CUSTOMERNAME)
 from sales
 group by CUSTOMERNAME
 order by 1 desc
---Total amount the top 20% customer contribute to the revenue of the company and the amount of revenue the rest of the customers contribute to the company's total revenue
---started with a CTE to calculate the total amount of sales made to each customer individually.
---i added another CTE to calculate the total amount of sales for the company
---The main query performs a subquery on customer_sales to calculate the cumulate percentage of sales for each customer using the SUM function and OVER clause. It also categorizes the customers into 'top 20% cstomers'and 'remaining customers' based on their cumulative percentage
---the outer query groups the data by customer_category and calculates the total contribution sales for each category
-with customer_sales AS (
-    select CUSTOMERNAME, sum(SALES) as total_sales
-    from sales
-    group by CUSTOMERNAME
-), total_revenue AS (
-    SELECT sum(SALES) as total_amount
-    from sales
-)
-select 
-case 
-    when cumulative_percentage <= 20 THEN 'top 20% customers'
-    else 'Remaining customers'
-end as customer_category,sum(total_sales)
-from (select CUSTOMERNAME, total_sales, 100* sum(total_sales) over (order by total_sales desc)/(select total_amount from total_revenue)as cumulative_percentage from customer_sales) as subquery
-group by
-CASE 
-    when cumulative_percentage <= 20 THEN 'top 20% customers'
-    else 'Remaining customers'
-END
+
 
 
 
