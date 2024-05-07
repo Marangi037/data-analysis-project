@@ -70,7 +70,7 @@ The analysis results are summarized as follows:
 - Madrid City had the highest sales among the cities.
 - Classic Cars are the best performing product in terms of sales.
 - Euro Shopping Channel contributed the highest percentage to the Company's revenue.
-  ! [Sales Dashboard](![Screenshot (125)](https://github.com/Marangi037/data-analysis-project/assets/159117592/1d063417-ba6a-450c-863f-873a32c44cdf)
+   [Sales Dashboard]((https://github.com/Marangi037/data-analysis-project/assets/159117592/1d063417-ba6a-450c-863f-873a32c44cdf)
 
 
 ###Recommendation
