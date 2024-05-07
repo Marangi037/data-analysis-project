@@ -25,20 +25,20 @@ The sales data used in this project is sourced from [Kaggle.com](http://www.kagg
 - SQL Server - Data cleaning and data analysis[Download here](http://www.SQLServer.com)
 - Excel - Data Visualization [Download here](http://www.Excel.com)
 
-###Data cleaning
+### Data cleaning
 In the initial preparation phase, i performed the following tasks:
 1. Data loading and inspection
 2. Handling missing values
 3. Data cleaning and formatting 
 
-###Exploratory Data Analysis
+### Exploratory Data Analysis
 - Which Country has most sales?
 - Which city has most sales
 - What percentage does each customer contribute to the company's revenue
 - 
 
 
-###Data Analysis 
+### Data Analysis 
 
 ```SQL
 with customer_sales AS (
@@ -61,7 +61,7 @@ CASE
     else 'Remaining customers'
 END;
 ```
-###Results
+### Results
 The analysis results are summarized as follows:
 - The company has its Peak sales in November and October.
 - The company had increase in sales from 2003 to 2004 and then a decrease in sales in 2005.
@@ -73,7 +73,7 @@ The analysis results are summarized as follows:
    [Sales Dashboard]((https://github.com/Marangi037/data-analysis-project/assets/159117592/1d063417-ba6a-450c-863f-873a32c44cdf)
 
 
-###Recommendation
+### Recommendation
 Based on the analysis, i recommend yhe following actions:
 - Invest in marketing and promotions during peak sales seasons to maximize revenue.
 - Invest in transportation of large goods to customers since they have the highest sales.
@@ -83,8 +83,7 @@ Based on the analysis, i recommend yhe following actions:
 - Partner with financial institutions or ofeer in-house financing options to make it easier for customers to purchase products. Flexible financing options can expand the customer base and increase sales.
 - Focus on providing excellent after-sale service and support.
 - Focus on achieve a 100% delivery rate of goods to the customers.
-###Limitation
-I had to remove all null values and replace them with zeros because the nulls would have interrupted with the accuracy of the analysis. 
+ 
 
 
 
