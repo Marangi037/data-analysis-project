@@ -1,4 +1,4 @@
-#Sales Data Analysis Project
+# Sales Data Analysis Project
 
 ## Table of contents
 
@@ -12,18 +12,18 @@
 - [Recommendations](#recommendation)
 
 
-###Project Overview
+### Project Overview
 
 
-###Data source
+### Data source
 The sales data used in this project is sourced from [Kaggle.com](http://www.kaggle.com).The dataset contains records of sales transactions from January 2003 to December 2005.
 
 
 
-###Tools
-- Excel - Data Visualization [Download here](http://www.Excel.com)
+### Tools
+
 - SQL Server - Data cleaning and data analysis[Download here](http://www.SQLServer.com)
-- Tableau - Creating reports[Download here](htttp://www.Tableau.com)
+- Excel - Data Visualization [Download here](http://www.Excel.com)
 
 ###Data cleaning
 In the initial preparation phase, i performed the following tasks:
@@ -70,6 +70,8 @@ The analysis results are summarized as follows:
 - Madrid City had the highest sales among the cities.
 - Classic Cars are the best performing product in terms of sales.
 - Euro Shopping Channel contributed the highest percentage to the Company's revenue.
+  ! [Sales Dashboard](![Screenshot (125)](https://github.com/Marangi037/data-analysis-project/assets/159117592/1d063417-ba6a-450c-863f-873a32c44cdf)
+
 
 ###Recommendation
 Based on the analysis, i recommend yhe following actions:
